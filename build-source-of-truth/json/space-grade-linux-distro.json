@@ -1,0 +1,47 @@
+{
+    "sources": {
+        "org.osbuild.curl": {
+            "urls": {
+                "sha256:c96a16541c504e29b6ef05bf4cf7432c207b39ef34ee9e944def00c5c48a8c09": "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/os/repodata/repomd.xml"
+            }
+        }
+    },
+    "pipeline": {
+        "stages": [
+            {
+                "name": "org.osbuild.rpm",
+                "options": {
+                    "packages": ["kernel", "bash", "coreutils", "grub2", "vim", "dracut"]
+                }
+            },
+            {
+                "name": "org.osbuild.fstab",
+                "options": {
+                    "filesystems": [
+                        {
+                            "path": "/",
+                            "uuid": "123e4567-e89b-12d3-a456-426614174001",
+                            "type": "ext4"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "org.osbuild.grub2",
+                "options": {
+                    "rootfs": {
+                        "uuid": "123e4567-e89b-12d3-a456-426614174001"
+                    }
+                }
+            },
+            {
+                "name": "org.osbuild.qemu",
+                "options": {
+                    "format": "qcow2",
+                    "filename": "space-grade-linux.qcow2",
+                    "size": 10737418240
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+[[customizations.user]]
+name = "space"
+password = "password"
+groups = ["wheel"]
+
+[customizations.installer.kickstart]
+contents = """
+text --non-interactive
+zerombr
+clearpart --all --initlabel --disklabel=gpt
+autopart --noswap --type=lvm
+network --bootproto=dhcp --device=link --activate --onboot=on
+"""
