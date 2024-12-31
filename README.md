@@ -46,8 +46,8 @@ sudo podman run \
 
 6) In another terminal execute **virsh console** to visualize the Virtual Machine.  
    Please note, we are using:  
-      user: space  
-      pass: password  
+      user: [**space**](https://github.com/containers/space-grade-linux/blob/d9609f3b0dfc8b966ab6553aedbf8a55af7548df/distro/config.toml#L2)  
+      pass: [**password**](https://github.com/containers/space-grade-linux/blob/d9609f3b0dfc8b966ab6553aedbf8a55af7548df/distro/config.toml#L3)  
 
 ```console
 virsh console fedora-bootc
