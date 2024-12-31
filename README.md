@@ -1,38 +1,38 @@
 # Table of Contents
 
 1. [Building the Space Distro](#building-the-space-distro)
-   1. [Ensure the image base is fetched](#1-ensure-the-image-base-is-fetched)
-   2. [Install virt-install and virt-viewer](#2-install-virt-install-and-virt-viewer)
-   3. [Create the output directory](#3-create-the-output-directory)
-   4. [Install and start libvirt](#4-install-and-start-libvirt)
-   5. [Run Podman to create the Virtual Machine](#5-run-podman-to-create-the-virtual-machine)
-   6. [Visualize the Virtual Machine with virsh console](#6-visualize-the-virtual-machine-with-virsh-console)
+   1.1. [Ensure the image base is fetched](#1-ensure-the-image-base-is-fetched)
+   1.2. [Install virt-install and virt-viewer](#2-install-virt-install-and-virt-viewer)
+   1.3. [Create the output directory](#3-create-the-output-directory)
+   1.4. [Install and start libvirt](#4-install-and-start-libvirt)
+   1.5. [Run Podman to create the Virtual Machine](#5-run-podman-to-create-the-virtual-machine)
+   1.6. [Visualize the Virtual Machine with virsh console](#6-visualize-the-virtual-machine-with-virsh-console)
 2. [Useful Commands](#useful-commands)
-   1. [Domain Information](#domain-information)
-   2. [Domain Network Information](#domain-network-information)
-   3. [Connecting via SSH to the Virtual Machine](#connecting-via-ssh-to-the-virtual-machine)
+   2.1. [Domain Information](#domain-information)
+   2.2. [Domain Network Information](#domain-network-information)
+   2.3. [Connecting via SSH to the Virtual Machine](#connecting-via-ssh-to-the-virtual-machine)
 
 ## Building the space distro
 
-1) Ensure the image base is fetched
+### Ensure the image base is fetched
 
 ```console
 sudo podman pull quay.io/centos-bootc/centos-bootc:stream9
 ```
 
-2) make sure your distro contain the package **virt-install and virt-viewer** installed
+### Install virt-install and virt-viewer
 
 ```console
 dnf install virt-install virt-viewer
 ```
 
-3) Create the directory output where you are doing to run the command
+### Create the output directory
 
 ```console
 mkdir -p output
 ```
 
-4) Make sure libvirt is installed and running
+### Install and start libvirt
 
 ```console
 dnf install libvirtd -y
@@ -40,7 +40,7 @@ systemctl enabled libvirtd
 systemctl start libvirtd
 ```
 
-5) Run podman to create the Virtual Machine
+### Run Podman to create the Virtual Machine
 
 ```console
 sudo podman run \
@@ -58,7 +58,8 @@ sudo podman run \
     quay.io/centos-bootc/centos-bootc:stream9
 ```
 
-6) In another terminal execute **virsh console** to visualize the Virtual Machine.  
+### Visualize the Virtual Machine with virsh console
+   In another terminal execute **virsh console** to visualize the Virtual Machine.  
    Please note, we are using:  
       user: [**space**](https://github.com/containers/space-grade-linux/blob/d9609f3b0dfc8b966ab6553aedbf8a55af7548df/distro/config.toml#L2)  
       pass: [**password**](https://github.com/containers/space-grade-linux/blob/d9609f3b0dfc8b966ab6553aedbf8a55af7548df/distro/config.toml#L3)  
