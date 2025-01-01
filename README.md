@@ -73,7 +73,7 @@ There is alternative to use ssh to the Virtual Machine, please see [Useful Comma
 
 ## Useful commands
 
-Domain information
+### Domain information
 ```console
 root@fedora:~# virsh dominfo fedora-bootc
 Id:             6
@@ -93,7 +93,7 @@ Security DOI:   0
 Security label: system_u:system_r:svirt_tcg_t:s0:c556,c955 (enforcing)
 ```
 
-Domain network information
+### Domain network information
 
 ```console
 root@fedora:~# virsh domifaddr fedora-bootc
@@ -102,7 +102,7 @@ root@fedora:~# virsh domifaddr fedora-bootc
  vnet2      52:54:00:c4:b1:6d    ipv4         192.168.124.55/24
 ```
 
-Connecting to ssh to Virtual Machine
+### Connecting to ssh to Virtual Machine
 
 ```console
 $ ssh 192.168.124.55 -lspace
