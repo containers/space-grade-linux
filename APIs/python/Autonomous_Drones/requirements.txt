@@ -1,0 +1,3 @@
+djitellopy>=2.4
+pygame>=2.1.0
+logging>=0.5.1.2
