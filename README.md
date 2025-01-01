@@ -12,6 +12,7 @@
    2.1. [Domain Information](#domain-information)  
    2.2. [Domain Network Information](#domain-network-information)  
    2.3. [Connecting via SSH to the Virtual Machine](#connecting-via-ssh-to-the-virtual-machine)  
+4. [Resources](#resources)
 
 
 ## About
