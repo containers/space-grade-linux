@@ -1,17 +1,17 @@
 # Table of Contents
 
 1. [About](#about)  
-   2. [Building the Space Distro](#building-the-space-distro)  
-      2.1. [Ensure the image base is fetched](#ensure-the-image-base-is-fetched)  
-      2.2. [Install virt-install and virt-viewer](#install-virt-install-and-virt-viewer)  
-      2.3. [Create the output directory](#create-the-output-directory)  
-      2.4. [Install and start libvirt](#install-and-start-libvirt)  
-      2.5. [Run Podman to create the Virtual Machine](#run-podman-to-create-the-virtual-machine)  
-      2.6. [Visualize the Virtual Machine with virsh console](#visualize-the-virtual-machine-with-virsh-console)  
+2. [Building the Space Distro](#building-the-space-distro)  
+   2.1. [Ensure the image base is fetched](#ensure-the-image-base-is-fetched)  
+   2.2. [Install virt-install and virt-viewer](#install-virt-install-and-virt-viewer)  
+   2.3. [Create the output directory](#create-the-output-directory)  
+   2.4. [Install and start libvirt](#install-and-start-libvirt)  
+   2.5. [Run Podman to create the Virtual Machine](#run-podman-to-create-the-virtual-machine)  
+   2.6. [Visualize the Virtual Machine with virsh console](#visualize-the-virtual-machine-with-virsh-console)  
 3. [Useful Commands](#useful-commands)  
-   2.1. [Domain Information](#domain-information)  
-   2.2. [Domain Network Information](#domain-network-information)  
-   2.3. [Connecting via SSH to the Virtual Machine](#connecting-via-ssh-to-the-virtual-machine)  
+   3.1. [Domain Information](#domain-information)  
+   3.2. [Domain Network Information](#domain-network-information)  
+   3.3. [Connecting via SSH to the Virtual Machine](#connecting-via-ssh-to-the-virtual-machine)  
 4. [Resources](#resources)
 
 
