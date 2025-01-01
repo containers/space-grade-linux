@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Function to display usage
+usage() {
+    echo "Usage: $0 <vm-name>"
+    echo "Shutdown, destroy, and undefine a virtual machine by name."
+    exit 1
+}
+
+# Check if an argument is provided
+if [ "$#" -ne 1 ]; then
+    usage
+fi
+
+VM_NAME=$1
+
+# Perform the actions
+echo "Shutting down VM: $VM_NAME"
+sudo virsh shutdown "$VM_NAME"
+
+echo "Destroying VM: $VM_NAME"
+sudo virsh destroy "$VM_NAME"
+
+echo "Undefining VM: $VM_NAME and removing all associated storage"
+sudo virsh undefine "$VM_NAME" --remove-all-storage
+
+echo "Operation completed for VM: $VM_NAME"
+
+echo -e "\nListing all vms:\n"
+sudo virsh list --all
