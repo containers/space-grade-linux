@@ -92,13 +92,21 @@ sudo podman run \
       pass: [**password**](https://github.com/containers/space-grade-linux/blob/d9609f3b0dfc8b966ab6553aedbf8a55af7548df/distro/config.toml#L3)  
 
 ```console
-virsh console fedora-bootc
+sudo virsh list # list active VMs
+sudo virsh console fedora-bootc
 ```
 
 There is alternative to use ssh to the Virtual Machine, please see [Useful Commands](useful-commands) session.
 
 
 ## Useful commands
+
+### List all vms
+
+```console
+sudo virsh list       # list active VMs
+sudo virsh list --all # list non active VMs as well
+```
 
 ### Domain information
 ```console
