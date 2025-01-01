@@ -1,6 +1,6 @@
 # Table of Contents
 
-1. [About](#about)
+1. [About](#about)  
    2. [Building the Space Distro](#building-the-space-distro)  
       2.1. [Ensure the image base is fetched](#ensure-the-image-base-is-fetched)  
       2.2. [Install virt-install and virt-viewer](#install-virt-install-and-virt-viewer)  
