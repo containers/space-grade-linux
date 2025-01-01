@@ -55,6 +55,7 @@ dnf install virt-install virt-viewer
 ### Create the output directory
 
 ```console
+cd distro/json
 mkdir -p output
 ```
 
