@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Function to print usage information
+print_usage() {
+    echo "Usage: $0 <vm_name>"
+    echo "Connect to the console of a specified virtual machine."
+    echo
+    echo "Arguments:"
+    echo "  <vm_name>    The name of the virtual machine to connect to."
+    exit 1
+}
+
+# Check if an argument is provided
+if [[ $# -ne 1 ]]; then
+    echo "Error: No virtual machine name provided."
+    print_usage
+fi
+
+# Connect to the virtual machine's console
+vm_name="$1"
+sudo virsh console "$vm_name"
