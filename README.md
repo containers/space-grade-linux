@@ -141,3 +141,7 @@ Last login: Tue Dec 31 23:12:03 2024
 [space@localhost ~]$ sudo su -
 [space@localhost ~]#
 ```
+
+## Resources
+[bootc: Getting started with bootable containers](https://developers.redhat.com/articles/2024/09/24/bootc-getting-started-bootable-containers#)  
+[osbuild - bootc-image-builder](https://github.com/osbuild/bootc-image-builder?tab=readme-ov-file)  
