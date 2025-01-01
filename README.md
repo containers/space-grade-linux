@@ -102,7 +102,7 @@ root@fedora:~# virsh domifaddr fedora-bootc
  vnet2      52:54:00:c4:b1:6d    ipv4         192.168.124.55/24
 ```
 
-### Connecting to ssh to Virtual Machine
+### Connecting via SSH to the Virtual Machine
 
 ```console
 $ ssh 192.168.124.55 -lspace
