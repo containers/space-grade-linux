@@ -128,13 +128,13 @@ Model rockets are an excellent and cost-effective alternative to using full-scal
 
 ### Models for Testing
 
-[Estes 1441 Journey Launch Set Beginner Model Kit](https://www.amazon.com/gp/product/B01I8VBUVK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
-[Estes Tandem-X Launch Set](https://www.amazon.com/gp/product/B002VLP67S/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
-[Estes 2206 NASA SLS Flying Model Rocket Kit | 1:200 Scale | Beginner Level](https://www.amazon.com/gp/product/B09JB8KD6K/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
-[Estes Saturn V 1:200 Scale](https://www.amazon.com/gp/product/B07QT4MVB6/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1)
-[Estes 009991 Space Shuttle Model Rocket - Launch Up to 600 ft - Replica Rocket for Kids, Teens, & Adults - No Assembly Required](https://www.amazon.com/gp/product/B0D2S1WXF3/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
-[Rocket Camera - Estes Universal Astrocam HD Rocket Camera & Holder 2208](https://www.amazon.com/gp/product/B09QVCP57H/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
-[Estes Blue Origin New Shepard 2198](https://www.amazon.com/gp/product/B09CHH8QKX/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
+[Estes 1441 Journey Launch Set Beginner Model Kit](https://www.amazon.com/gp/product/B01I8VBUVK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+[Estes Tandem-X Launch Set](https://www.amazon.com/gp/product/B002VLP67S/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+[Estes 2206 NASA SLS Flying Model Rocket Kit | 1:200 Scale | Beginner Level](https://www.amazon.com/gp/product/B09JB8KD6K/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+[Estes Saturn V 1:200 Scale](https://www.amazon.com/gp/product/B07QT4MVB6/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1)  
+[Estes 009991 Space Shuttle Model Rocket - Launch Up to 600 ft - Replica Rocket for Kids, Teens, & Adults - No Assembly Required](https://www.amazon.com/gp/product/B0D2S1WXF3/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+[Rocket Camera - Estes Universal Astrocam HD Rocket Camera & Holder 2208](https://www.amazon.com/gp/product/B09QVCP57H/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+[Estes Blue Origin New Shepard 2198](https://www.amazon.com/gp/product/B09CHH8QKX/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
 
 ---
 
@@ -174,22 +174,9 @@ Model rockets are an excellent and cost-effective alternative to using full-scal
 - **Engaging Visuals**: Their launches are visually engaging, making them perfect for demonstrations in classrooms, public science fairs, or promotional events.
 - **Hands-On Experience**: Participants can actively engage in building and launching model rockets, fostering greater understanding and enthusiasm for aerospace engineering.
 
----
-
-### **6. Environmental and Operational Efficiency**
-- **Minimal Resources**: Model rocket launches require minimal fuel and ground infrastructure compared to the logistical demands of full-scale rockets.
-- **Reduced Waste**: Smaller rockets mean less material waste in case of failure, allowing for more frequent and eco-friendly testing.
-
----
-
-### **Example Use Cases**
-- **Educational Demonstrations**: Teaching basic physics, aerodynamics, or propulsion principles.
-- **Design Testing**: Validating the effectiveness of aerodynamic shapes or recovery systems before full-scale development.
-- **Public Relations**: Showcasing rocket launches during events without the expense and complexity of launching a real rocket.
-
----
-
 Using model rockets allows teams to validate ideas, refine designs, and conduct compelling demonstrations at a fraction of the cost and risk of full-scale rockets. They offer flexibility to tailor the demonstration to specific needs while being highly scalable and efficient.
+
+---
 
 ## Useful commands
 
