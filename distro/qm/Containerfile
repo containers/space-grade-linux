@@ -7,7 +7,7 @@
 # podman push quay.io/qm-images/space-grade-linux:latest
 FROM quay.io/qm-images/space-grade-linux:latest
 
-RUN dnf update -y && \
+#RUN dnf update -y && \
 dnf install -y 'dnf-command(config-manager)'
 
 RUN  dnf config-manager --set-enabled crb
@@ -31,4 +31,4 @@ RUN /usr/share/qm/setup --skip-systemctl --hostname localrootfs
 RUN systemctl enable bluechi-controller && \
 systemctl enable bluechi-agent
 
-ENTRYPOINT ["/sbin/init"]
+#ENTRYPOINT ["/sbin/init"]
