@@ -168,15 +168,12 @@ A rocket, engine, launchpad and parachute. If you are starting and have tidy bud
 <p align="center">
   <img src="https://github.com/containers/space-grade-linux/blob/main/pics/model_rockets/Estes_2208_Universal_Astrocam.jpg" alt="Rocket Camera" width="30%">
 </p>
----
 
 ### **1. Cost Savings**
 - **Material Costs**: Model rockets are made of inexpensive materials like cardboard, balsa wood, and plastic, while original rockets use high-grade metals, composites, and advanced electronics that are costly to manufacture.
 - **Propulsion Systems**: Model rockets use small, affordable solid rocket engines that cost a few dollars, compared to the multi-million-dollar engines on full-scale rockets.
 - **Reusable Parts**: With proper recovery systems (e.g., parachutes), many parts of a model rocket can be reused, reducing recurring costs.
   
----
-
 ### **2. Scalability for Demonstration**
 - **Scaled-Down Simulations**: Model rockets are a scaled-down representation of full-size rockets, making them ideal for demonstrating concepts like:
   - Aerodynamic design.
@@ -184,14 +181,10 @@ A rocket, engine, launchpad and parachute. If you are starting and have tidy bud
   - Staging and propulsion systems.
 - **Prototyping and Iteration**: Changes to designs can be tested rapidly with model rockets without the need for costly full-scale prototypes.
 
----
-
 ### **3. Safe and Practical Testing**
 - **Controlled Environment**: Model rockets can be launched in smaller, controlled environments like fields, requiring less infrastructure than full-scale rocket testing.
 - **Safety**: Their size and lightweight materials make them safer to use in demonstrations or educational settings.
 - **Regulated Engines**: Model rocket engines are designed to be safe and manageable, unlike full-scale engines that require extensive safety precautions and specialized facilities.
-
----
 
 ### **4. Versatility for Different Demonstrations**
 - **Aerodynamic Testing**: Demonstrate airflow, stability, and drag reduction techniques using various nose cone and fin designs.
@@ -199,16 +192,12 @@ A rocket, engine, launchpad and parachute. If you are starting and have tidy bud
 - **Payload Integration**: Showcase payload deployment or sensor testing using scaled-down prototypes of full-size equipment.
 - **Staging Demonstrations**: Simulate multi-stage rockets to explain how boosters separate and ignite.
 
----
-
 ### **5. Educational and Public Outreach**
 - **Simplified Concepts**: Model rockets are an accessible way to teach the principles of rocketry, such as thrust, gravity, and trajectory, without overwhelming costs or risks.
 - **Engaging Visuals**: Their launches are visually engaging, making them perfect for demonstrations in classrooms, public science fairs, or promotional events.
 - **Hands-On Experience**: Participants can actively engage in building and launching model rockets, fostering greater understanding and enthusiasm for aerospace engineering.
 
 Using model rockets allows teams to validate ideas, refine designs, and conduct compelling demonstrations at a fraction of the cost and risk of full-scale rockets. They offer flexibility to tailor the demonstration to specific needs while being highly scalable and efficient.
-
----
 
 ### Engines
 The **Estes rocket engines** are categorized by a system of letters and numbers that indicate the engine's total impulse, average thrust, and delay time before deploying the recovery system. Here’s what each part of the engine code means:
