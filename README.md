@@ -135,7 +135,7 @@ Model rockets are an excellent and cost-effective alternative to using full-scal
 
 - [Estes Tandem-X Launch Set](https://www.amazon.com/gp/product/B002VLP67S/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
 <p align="center">
-  <img src="https://github.com/containers/space-grade-linux/blob/main/pics/model_rockets/estes_tandem-x_launch_set_30inches.jpg" alt="Estes Tandem-x Launch Set" width="30%">
+  <img src="https://github.com/containers/space-grade-linux/blob/main/pics/model_rockets/Estes_tandem-x_launch_set_30inches.jpg" alt="Estes Tandem-x Launch Set" width="30%">
 </p>
 
 - [Estes 2206 NASA SLS Flying Model Rocket Kit](https://www.amazon.com/gp/product/B09JB8KD6K/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
