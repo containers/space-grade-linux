@@ -12,6 +12,7 @@
    3.1. [Why Model Rockets](#why-model-rockets)  
    3.2. [Models for Testing](#models-for-testing)  
    3.3. [Whats required to make it work](#whats-required-to-make-it-work)
+   3.4. [Engines](#engines)
 4. [Useful Commands](#useful-commands)  
    4.1. [Domain Information](#domain-information)  
    4.2. [Domain Network Information](#domain-network-information)  
@@ -208,6 +209,70 @@ A rocket, engine, launchpad and parachute. If you are starting and have tidy bud
 Using model rockets allows teams to validate ideas, refine designs, and conduct compelling demonstrations at a fraction of the cost and risk of full-scale rockets. They offer flexibility to tailor the demonstration to specific needs while being highly scalable and efficient.
 
 ---
+
+### Engines
+The **Estes rocket engines** are categorized by a system of letters and numbers that indicate the engine's total impulse, average thrust, and delay time before deploying the recovery system. Here’s what each part of the engine code means:
+
+### Breakdown of the Code:
+1. **First Letter (A, B, C, E)**:  
+   Indicates the total impulse (power) of the engine, measured in Newton-seconds. Each successive letter roughly doubles the total impulse:
+   - **A**: 2.5 N·s
+   - **B**: 5.0 N·s
+   - **C**: 10.0 N·s
+   - **E**: 40.0 N·s
+
+   Higher letters result in greater thrust and altitude potential.
+
+2. **First Number (4, 6, 12)**:  
+   Indicates the average thrust in Newtons. Higher numbers provide a stronger push, which is better for heavier rockets.
+
+3. **Second Number (3, 4, 5, 0)**:  
+   Indicates the delay in seconds before the ejection charge fires (used for deploying parachutes or other recovery systems).  
+   - **0** indicates a booster engine with no delay or recovery charge; it's meant to stage another engine or burn out.
+
+---
+
+### Comparing the Engines:
+#### **A8-3**
+- **Impulse**: Low (A-level, 2.5 N·s).
+- **Thrust**: 8 N average.
+- **Delay**: 3 seconds.
+- Best for small, lightweight rockets; reaches moderate altitudes (~100-200 feet). The delay gives time for the rocket to coast to apogee before deploying recovery.
+
+#### **B4-4**
+- **Impulse**: Medium (B-level, 5.0 N·s).
+- **Thrust**: 4 N average.
+- **Delay**: 4 seconds.
+- Suitable for slightly larger rockets or lighter ones for greater altitudes (~200-400 feet). The delay matches a slightly higher apogee.
+
+#### **C6-5**
+- **Impulse**: High (C-level, 10.0 N·s).
+- **Thrust**: 6 N average.
+- **Delay**: 5 seconds.
+- Higher power for larger rockets or very lightweight rockets for extreme altitudes (~600-1200 feet). The delay suits higher flight paths.
+
+#### **E12-0**
+- **Impulse**: Very high (E-level, 40.0 N·s).
+- **Thrust**: 12 N average.
+- **Delay**: None (0 indicates it's a booster engine).
+- Designed for multi-stage rockets, as it ignites another engine after burnout. Not for single-stage recovery systems.
+
+---
+
+### Key Differences:
+1. **Total Power**: The higher the letter, the more powerful the engine.
+2. **Thrust**: The first number determines how much "push" the engine provides.
+3. **Delay**: Determines when the recovery system activates (if it does). Engines with "0" are booster stages.
+
+---
+
+### Which to Use?
+- **A8-3**: Best for beginners or lightweight, low-altitude flights.
+- **B4-4**: Intermediate power for medium rockets.
+- **C6-5**: Higher altitude or larger rocket flights.
+- **E12-0**: Multi-stage rockets needing a powerful booster.
+
+Always match the engine to your rocket’s weight, stability, and design specifications, and check the recommended engines for your model.
 
 ## Useful commands
 
