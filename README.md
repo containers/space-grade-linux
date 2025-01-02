@@ -128,13 +128,13 @@ Model rockets are an excellent and cost-effective alternative to using full-scal
 
 ### Models for Testing
 
-[Estes 1441 Journey Launch Set Beginner Model Kit](https://www.amazon.com/gp/product/B01I8VBUVK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
-[Estes Tandem-X Launch Set](https://www.amazon.com/gp/product/B002VLP67S/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
-[Estes 2206 NASA SLS Flying Model Rocket Kit | 1:200 Scale | Beginner Level](https://www.amazon.com/gp/product/B09JB8KD6K/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
-[Estes Saturn V 1:200 Scale](https://www.amazon.com/gp/product/B07QT4MVB6/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1)  
-[Estes 009991 Space Shuttle Model Rocket - Launch Up to 600 ft - Replica Rocket for Kids, Teens, & Adults - No Assembly Required](https://www.amazon.com/gp/product/B0D2S1WXF3/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
-[Rocket Camera - Estes Universal Astrocam HD Rocket Camera & Holder 2208](https://www.amazon.com/gp/product/B09QVCP57H/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
-[Estes Blue Origin New Shepard 2198](https://www.amazon.com/gp/product/B09CHH8QKX/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+- [Estes 1441 Journey Launch Set Beginner Model Kit](https://www.amazon.com/gp/product/B01I8VBUVK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+- [Estes Tandem-X Launch Set](https://www.amazon.com/gp/product/B002VLP67S/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+- [Estes 2206 NASA SLS Flying Model Rocket Kit | 1:200 Scale | Beginner Level](https://www.amazon.com/gp/product/B09JB8KD6K/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+- [Estes Saturn V 1:200 Scale](https://www.amazon.com/gp/product/B07QT4MVB6/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1)  
+- [Estes 009991 Space Shuttle Model Rocket - Launch Up to 600 ft - Replica Rocket for Kids, Teens, & Adults - No Assembly Required](https://www.amazon.com/gp/product/B0D2S1WXF3/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+- [Rocket Camera - Estes Universal Astrocam HD Rocket Camera & Holder 2208](https://www.amazon.com/gp/product/B09QVCP57H/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+- [Estes Blue Origin New Shepard 2198](https://www.amazon.com/gp/product/B09CHH8QKX/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
 
 ---
 
