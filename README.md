@@ -134,6 +134,9 @@ Model rockets are an excellent and cost-effective alternative to using full-scal
 </p>
 
 - [Estes Tandem-X Launch Set](https://www.amazon.com/gp/product/B002VLP67S/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+<p align="center">
+  <img src="https://github.com/containers/space-grade-linux/blob/main/pics/model_rockets/estes_tandem-x_launch_set_30inches.jpg" alt="Estes Tandem-x Launch Set" width="30%">
+</p>
 - [Estes 2206 NASA SLS Flying Model Rocket Kit | 1:200 Scale | Beginner Level](https://www.amazon.com/gp/product/B09JB8KD6K/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
 - [Estes Saturn V 1:200 Scale](https://www.amazon.com/gp/product/B07QT4MVB6/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1)  
 - [Estes 009991 Space Shuttle Model Rocket - Launch Up to 600 ft - Replica Rocket for Kids, Teens, & Adults - No Assembly Required](https://www.amazon.com/gp/product/B0D2S1WXF3/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
