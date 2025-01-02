@@ -10,7 +10,7 @@
    2.6. [Visualize the Virtual Machine with virsh console](#visualize-the-virtual-machine-with-virsh-console)  
 3. [Model Rockets](#model-rockets)  
    3.1. [Why Model Rockets](#why-model-rockets)  
-   3.2. [Models for Testing](models-for-testing)  
+   3.2. [Models for Testing](#models-for-testing)  
 4. [Useful Commands](#useful-commands)  
    4.1. [Domain Information](#domain-information)  
    4.2. [Domain Network Information](#domain-network-information)  
