@@ -9,7 +9,7 @@
    2.5. [Run Podman to create the Virtual Machine](#run-podman-to-create-the-virtual-machine)  
    2.6. [Visualize the Virtual Machine with virsh console](#visualize-the-virtual-machine-with-virsh-console)  
 3. [Model Rockets](#model-rockets)  
-   3.1. [Why Model Rockets](#why-model-rocket)  
+   3.1. [Why Model Rockets](#why-model-rockets)  
    3.2. [models for testing](models-for-testing)  
 4. [Useful Commands](#useful-commands)  
    4.1. [Domain Information](#domain-information)  
