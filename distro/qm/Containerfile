@@ -1,0 +1,34 @@
+# ContainerFile used to create the image available at quay.io/qm-images/audio:latest
+#
+# How to build
+# ==================
+# podman login quay.io
+# podman build -t quay.io/qm-images/space-grade-linux:latest -f Containerfile
+# podman push quay.io/qm-images/space-grade-linux:latest
+FROM quay.io/centos/centos:stream9
+
+RUN dnf update -y && \
+dnf install -y 'dnf-command(config-manager)'
+
+RUN  dnf config-manager --set-enabled crb
+
+RUN dnf copr enable -y rhcontainerbot/qm centos-stream-9-$(arch) && \
+dnf install -y epel-release
+
+RUN dnf install -y qm bluechi-ctl bluechi podman hostname crun fuse-overlayfs
+
+COPY files/ /
+
+RUN curl https://raw.githubusercontent.com/containers/qm/main/tools/qm-storage-settings > /usr/share/qm/qm-storage-settings && \
+chmod +x /usr/share/qm/qm-storage-settings
+
+# RUN mkdir -p /usr/lib/qm/rootfs/usr/share/containers && \
+# mkdir -p /etc/qm/containers && \
+# ln -s /usr/lib/qm/rootfs/usr/share/containers/storage.conf /etc/qm/containers/storage.conf
+
+RUN /usr/share/qm/setup --skip-systemctl --hostname localrootfs
+
+RUN systemctl enable bluechi-controller && \
+systemctl enable bluechi-agent
+
+ENTRYPOINT ["/sbin/init"]
