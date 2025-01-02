@@ -163,8 +163,10 @@ A rocket, engine, launchpad and parachute. If you are starting and have tidy bud
   <img src="https://github.com/containers/space-grade-linux/blob/main/pics/model_rockets/Blue_Origin_Shepard_2198.jpg" alt="Blue Origin" width="30%">
 </p>
 
-
-- [Rocket Camera - Estes Universal Astrocam HD Rocket Camera & Holder 2208](https://www.amazon.com/gp/product/B09QVCP57H/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+- [Rocket Camera - Estes Universal Astrocam HD Rocket Camera 2208](https://www.amazon.com/gp/product/B09QVCP57H/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+<p align="center">
+  <img src="https://github.com/containers/space-grade-linux/blob/main/pics/model_rockets/Estes_2208_Universal_Astrocam.jpg" alt="Rocket Camera" width="30%">
+</p>
 ---
 
 ### **1. Cost Savings**
