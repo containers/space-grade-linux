@@ -130,7 +130,7 @@ Model rockets are an excellent and cost-effective alternative to using full-scal
 
 ### Whats required to make it work
 
-A rocket, engine, launchpad and parachute. If you are starting and have tidy budget look for Beginner model kit and A8-3 Engine. The beginner kits usually contain Launch pads, a kit to build rocket and parachute. However, if you don't have time to build a rocket, buy one already assembled.
+A rocket, engine, launchpad, recovery wadding and parachute. If you are starting and have tidy budget look for Beginner model kit and A8-3 Engine. The beginner kits usually contain Launch pads, a kit to build rocket and parachute. However, if you don't have time to build a rocket, buy one already assembled.
 
 ### Models for Testing
 
