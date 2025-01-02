@@ -11,7 +11,7 @@
             {
                 "name": "org.osbuild.rpm",
                 "options": {
-                    "packages": ["kernel", "bash", "coreutils", "grub2", "vim", "dracut"]
+                    "packages": ["kernel", "bash", "coreutils", "grub2", "vim", "dracut", "epel-release"]
                 }
             },
             {

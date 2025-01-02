@@ -10,4 +10,9 @@ zerombr
 clearpart --all --initlabel --disklabel=gpt
 autopart --noswap --type=lvm
 network --bootproto=dhcp --device=link --activate --onboot=on
+
+
+# Here's where we reference the container image to install - notice the kickstart
+# has no `%packages` section!  What's being installed here is a container image.
+ostreecontainer --url quay.io/repository/dougsland/space-grade-linux?namespace=dougsland
 """
