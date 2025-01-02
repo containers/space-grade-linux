@@ -149,7 +149,11 @@ Model rockets are an excellent and cost-effective alternative to using full-scal
 </p>
 
 
-- [Estes 009991 Space Shuttle Model Rocket - Launch Up to 600 ft - Replica Rocket for Kids, Teens, & Adults - No Assembly Required](https://www.amazon.com/gp/product/B0D2S1WXF3/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+- [Estes 009991 Space Shuttle Model Rocket](https://www.amazon.com/gp/product/B07QT4MVB6/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
+<p align="center">
+  <img src="https://github.com/containers/space-grade-linux/blob/main/pics/model_rockets/Space_Shuttle_Model_Rocket.jpg" alt="Space Shuttle Model" width="30%">
+</p>
+
 - [Rocket Camera - Estes Universal Astrocam HD Rocket Camera & Holder 2208](https://www.amazon.com/gp/product/B09QVCP57H/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
 - [Estes Blue Origin New Shepard 2198](https://www.amazon.com/gp/product/B09CHH8QKX/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
 
