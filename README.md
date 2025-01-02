@@ -11,7 +11,7 @@
 3. [Model Rockets](#model-rockets)  
    3.1. [Why Model Rockets](#why-model-rockets)  
    3.2. [Models for Testing](#models-for-testing)  
-   3.3. [Whats required to make it work](#whats-required-to-make-it-work)
+   3.3. [Whats required to make it work](#whats-required-to-make-it-work)  
    3.4. [Engines](#engines)
 4. [Useful Commands](#useful-commands)  
    4.1. [Domain Information](#domain-information)  
