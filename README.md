@@ -130,12 +130,12 @@ Model rockets are an excellent and cost-effective alternative to using full-scal
 
 - [Estes 1441 Journey Launch Set Beginner Model Kit](https://www.amazon.com/gp/product/B01I8VBUVK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
 <p align="center">
-  <img src="https://github.com/containers/space-grade-linux/blob/main/pics/model_rockets/Estes_1441_Journey_Launch_Set_Beginner_Model_Kit.jpg" alt="Estes 1441" width="30%">
+  <img src="https://github.com/containers/space-grade-linux/blob/main/pics/model_rockets/Estes_1441_Journey_Launch_Set_Beginner_Model_Kit.jpg" alt="Estes 1441" width="10%">
 </p>
 
 - [Estes Tandem-X Launch Set](https://www.amazon.com/gp/product/B002VLP67S/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
 <p align="center">
-  <img src="https://github.com/containers/space-grade-linux/blob/main/pics/model_rockets/Estes_tandem-x_launch_set_30inches.jpg" alt="Estes Tandem-x Launch Set" width="30%">
+  <img src="https://github.com/containers/space-grade-linux/blob/main/pics/model_rockets/Estes_tandem-x_launch_set_30inches.jpg" alt="Estes Tandem-x Launch Set" width="10%">
 </p>
 
 - [Estes 2206 NASA SLS Flying Model Rocket Kit](https://www.amazon.com/gp/product/B09JB8KD6K/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)  
@@ -145,7 +145,7 @@ Model rockets are an excellent and cost-effective alternative to using full-scal
 
 - [Estes Saturn V 1:200 Scale](https://www.amazon.com/gp/product/B07QT4MVB6/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1)  
 <p align="center">
-  <img src="https://github.com/containers/space-grade-linux/blob/main/pics/model_rockets/Estes_Saturn_V.jpg" alt="Estes Saturn V" width="30%">
+  <img src="https://github.com/containers/space-grade-linux/blob/main/pics/model_rockets/Estes_Saturn_V.jpg" alt="Estes Saturn V" width="10%">
 </p>
 
 
