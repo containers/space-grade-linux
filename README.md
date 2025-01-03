@@ -75,51 +75,20 @@ systemctl start libvirtd
 ### Run Podman to create the Virtual Machine
 
 ```console
-sudo podman run \
-    --rm \
-    -it \
-    --privileged \
-    --pull=newer \
-    --security-opt label=type:unconfined_t \
-    -v ./config.toml:/config.toml:ro \
-    -v ./output:/output \
-    -v /var/lib/containers/storage:/var/lib/containers/storage \
-    quay.io/centos-bootc/bootc-image-builder:latest \
-    --type qcow2 \
-    --local \
-    quay.io/centos-bootc/centos-bootc:stream9
+git clone https://github.com/containers/space-grade-linux.git
+cd space-grade-linux/tools
+
+./space-generate-and-run-distro 
+
+Listing qcow2 image from distro/json/output/qcow2/...
+===========================================
+
+ Id   Name           State
+------------------------------
+ 1    space-grade-linux   running
+
+sudo podman exec -it space-grade-linux
 ```
-
-Install the disk
-
-```console
-    sudo virt-install \
-    --name centos-bootc \
-    --cpu host \
-    --vcpus 4 \
-    --memory 16096 \
-    --import --disk ./output/qcow2/disk.qcow2,format=qcow2 \
-    --os-variant fedora-eln \
-    --noautoconsole
-```
-
-List the Virtual Machine to make sure it's installed and running
-```
-    sudo virsh list
-```
-
-### Visualize the Virtual Machine with virsh console
-   In another terminal execute **virsh console** to visualize the Virtual Machine.  
-   Please note, we are using:  
-      user: [**space**](https://github.com/containers/space-grade-linux/blob/d9609f3b0dfc8b966ab6553aedbf8a55af7548df/distro/config.toml#L2)  
-      pass: [**password**](https://github.com/containers/space-grade-linux/blob/d9609f3b0dfc8b966ab6553aedbf8a55af7548df/distro/config.toml#L3)  
-
-```console
-sudo virsh list # list active VMs
-sudo virsh console fedora-bootc
-```
-
-There is alternative to use ssh to the Virtual Machine, please see [Useful Commands](useful-commands) session.
 
 ## Model Rockets
 
