@@ -17,14 +17,14 @@ pushd ../distro/json/
     quay.io/qm-images/space-grade-linux:latest \
     --type qcow2 \
     --local \
-    quay.io/centos-bootc/centos-bootc:stream9 &
+    quay.io/centos-bootc/centos-bootc:stream9
 
     echo -e "\nListing qcow2 image from distro/json/output/qcow2/..."
     echo -e "===========================================\n"
     ls output/qcow2/
 
     sudo virt-install \
-    --name centos-bootc \
+    --name space-grade-linux \
     --cpu host \
     --vcpus 4 \
     --memory 16096 \
