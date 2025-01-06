@@ -15,6 +15,6 @@ $ podman exec -it qm_kvm bash
 [root@0071e11d9a9c ~]# ls -la /dev/kvm
 crw-rw-rw-. 1 nobody nobody 10, 232 Jan  3 07:03 /dev/kvm
 [root@0071e11d9a9c ~]# 
-[root@0071e11d9a9c ~]# dnf install virt-install virt-viewer libvirt -y
+[root@0071e11d9a9c ~]# dnf install virt-install virt-viewer libvirt qemu-kvm -y
 [root@0071e11d9a9c ~]# systemctl enable --now libvirtd
 ```
