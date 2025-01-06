@@ -12,6 +12,7 @@ RUN dnf install -y hostname \
 		   make \
 		   gcc \
 		   g++ \
+		   podman \
 		   rpm-build \
 		   container-selinux \
 		   golang-github-cpuguy83-md2man \
