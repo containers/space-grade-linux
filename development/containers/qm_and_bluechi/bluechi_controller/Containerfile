@@ -14,6 +14,7 @@ RUN dnf install -y hostname \
                    podman \
 		   g++ \
 		   bluechi \
+                   bluechi-agent \
 		   bluechi-ctl \
 		   bluechi-selinux \
 		   rpm-build \
@@ -42,12 +43,12 @@ RUN systemctl enable bluechi-controller && \
 systemctl enable bluechi-agent
 
 # Controller settings
-RUN echo -e "[bluechi-controller]\nAllowedNodeNames=server\n" > /etc/bluechi/controller.conf.d/controller.conf
+RUN echo -e "[bluechi-controller]\nNodeName=bluechi_controller\nAllowedNodeNames=bluechi_agent01,bluechi_agent02\n" > /etc/bluechi/controller.conf.d/controller.conf
 
 # Agent settings
-RUN echo -e "[bluechi-agent]\nControllerAddress=unix:path=/run/bluechi/bluechi.sock\n" > /etc/bluechi/agent.conf.d/agent.conf
+RUN echo -e "[bluechi-agent]\nNodeName=bluechi_agent01\nControllerHost=127.0.0.1\nControllerPort=842\n" > /etc/bluechi/agent.conf.d/agent.conf
 
 # Dynamically fetch IP and append to /etc/hosts
-RUN IP=$(hostname -I | awk '{print $1}') && echo "$IP server" >> /etc/hosts
+RUN IP=$(hostname -I | awk '{print $1}') && echo "$IP bluechi_controller" >> /etc/hosts
 
 ENTRYPOINT ["/sbin/init"]
