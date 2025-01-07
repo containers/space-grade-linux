@@ -14,8 +14,8 @@ Setting Bluechi controller entry into /etc/hosts
 ```console
 export BLUECHI_SERVER_IP=$(podman exec -it qm_bluechi_controller hostname -I | awk '{print $1}')
 podman exec -it qm_bluechi_controller bash -c "echo \"$BLUECHI_SERVER_IP bluechi_controller\" >> /etc/hosts"
-podman exec -it qm_bluechi bash -c "systemctl restart bluechi-controller"
-podman exec -it qm_bluechi bash -c "systemctl restart bluechi-agent"
+podman exec -it qm_bluechi_controller bash -c "systemctl restart bluechi-controller"
+podman exec -it qm_bluechi_controller bash -c "systemctl restart bluechi-agent"
 ```
 
 ## Shell
