@@ -1,16 +1,19 @@
 ## Build
 ```console
 podman build --cap-add=sys_admin -t localhost/spaceship:latest .
-podman build --cap-add=sys_admin -f Containerfile_spaceship_modules -t localhost/engine_spaceship:latest .
+podman build --cap-add=sys_admin -f engines/Containerfile_engine1 -t localhost/engine1_spaceship:latest .
+podman build --cap-add=sys_admin -f engines/Containerfile_engine2 -t localhost/engine2_spaceship:latest .
+podman build --cap-add=sys_admin -f engines/Containerfile_engine3 -t localhost/engine3_spaceship:latest .
+podman build --cap-add=sys_admin -f engines/Containerfile_engine4 -t localhost/engine4_spaceship:latest .
 ```
 
 ## Run
 ```console
 podman run -d --name spaceship_base --privileged localhost/spaceship:latest
-podman run -d --name engine1_spaceship --privileged localhost/engine_spaceship:latest
-podman run -d --name engine2_spaceship --privileged localhost/engine_spaceship:latest
-podman run -d --name engine3_spaceship --privileged localhost/engine_spaceship:latest
-podman run -d --name engine4_spaceship --privileged localhost/engine_spaceship:latest
+podman run -d --name engine1_spaceship --privileged localhost/engine1_spaceship:latest
+podman run -d --name engine2_spaceship --privileged localhost/engine2_spaceship:latest
+podman run -d --name engine3_spaceship --privileged localhost/engine3_spaceship:latest
+podman run -d --name engine4_spaceship --privileged localhost/engine4_spaceship:latest
 ```
 
 ## Setting Spaceship base
@@ -35,17 +38,17 @@ export ENGINE4_SPACESHIP_IP=$(podman exec -it engine4_spaceship hostname -I | aw
 
 Rocket Stages
 ```
-rocket_stages=( \
+rocket_modules=( \
     "engine1_spaceship" \
     "engine2_spaceship" \
     "engine3_spaceship" \
     "engine4_spaceship" \
 )
 
-for stage in "${rocket_stages[@]}"; do
-  podman exec -it ${stage} bash -c "echo \"\$${stage^^}_SPACESHIP_IP ${stage}\" >> /etc/hosts"
-  podman exec -it ${stage} bash -c "echo \"$SPACESHIP_BASE_IP spaceship_base\" >> /etc/hosts"
-  podman exec -it ${stage} bash -c "systemctl restart bluechi-agent"
+for module in "${rocket_modules[@]}"; do
+  podman exec -it ${module} bash -c "echo \"\$${module^^}_SPACESHIP_IP ${module}\" >> /etc/hosts"
+  podman exec -it ${module} bash -c "echo \"$SPACESHIP_BASE_IP spaceship_base\" >> /etc/hosts"
+  podman exec -it ${module} bash -c "systemctl restart bluechi-agent"
 done
 ```
 
