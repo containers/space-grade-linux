@@ -31,10 +31,6 @@ export ENGINE1_SPACESHIP_IP=$(podman exec -it engine1_spaceship hostname -I | aw
 export ENGINE2_SPACESHIP_IP=$(podman exec -it engine2_spaceship hostname -I | awk '{print $1}')
 export ENGINE3_SPACESHIP_IP=$(podman exec -it engine3_spaceship hostname -I | awk '{print $1}')
 export ENGINE4_SPACESHIP_IP=$(podman exec -it engine4_spaceship hostname -I | awk '{print $1}')
-
-podman exec -it spaceship_base bash -c "echo \"$SPACESHIP_BASE_IP spaceship_base\" >> /etc/hosts"
-podman exec -it spaceship_base bash -c "systemctl restart bluechi-controller"
-podman exec -it spaceship_base bash -c "systemctl restart bluechi-agent"
 ```
 
 Rocket Stages
