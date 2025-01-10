@@ -36,7 +36,7 @@ export ENGINE3_SPACESHIP_IP=$(podman exec -it engine3_spaceship hostname -I | aw
 export ENGINE4_SPACESHIP_IP=$(podman exec -it engine4_spaceship hostname -I | awk '{print $1}')
 ```
 
-Rocket Stages
+## Rocket Stages
 ```
 rocket_modules=( \
     "engine1_spaceship" \
