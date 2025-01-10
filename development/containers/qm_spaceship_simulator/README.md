@@ -22,7 +22,9 @@ Setting Spaceship Base entry into /etc/hosts
 ```console
 export SPACESHIP_BASE_IP=$(podman exec -it spaceship_base hostname -I | awk '{print $1}')
 podman exec -it spaceship_base bash -c "echo \"$SPACESHIP_BASE_IP spaceship_base\" >> /etc/hosts"
+sleep 1 # give some time
 podman exec -it spaceship_base bash -c "systemctl restart bluechi-controller"
+sleep 1
 podman exec -it spaceship_base bash -c "systemctl restart bluechi-agent"
 ```
 
