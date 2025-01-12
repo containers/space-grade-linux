@@ -43,10 +43,10 @@ RUN systemctl enable bluechi-controller && \
 systemctl enable bluechi-agent
 
 # Controller settings
-RUN echo -e "[bluechi-controller]\nNodeName=bluechi_controller\nAllowedNodeNames=spaceship_base,engine1_spaceship,engine2_spaceship\n" > /etc/bluechi/controller.conf.d/controller.conf
+RUN echo -e "[bluechi-controller]\nNodeName=bluechi_controller\nAllowedNodeNames=spaceship_base,engine1-spaceship,engine2-spaceship,engine3-spaceship,engine4-spaceship,engine5-spaceship,engine6-spaceship,engine7-spaceship,engine8-spaceship,engine9-spaceship\n" > /etc/bluechi/controller.conf.d/controller.conf
 
 # Agent settings
-RUN echo -e "[bluechi-agent]\nNodeName=bluechi_agent01\nControllerHost=127.0.0.1\nControllerPort=842\n" > /etc/bluechi/agent.conf.d/agent.conf
+RUN echo -e "[bluechi-agent]\nNodeName=engine1-spaceship\nControllerHost=127.0.0.1\nControllerPort=842\n" > /etc/bluechi/agent.conf.d/agent.conf
 
 # Dynamically fetch IP and append to /etc/hosts
 RUN IP=$(hostname -I | awk '{print $1}') && echo "$IP bluechi_controller" >> /etc/hosts

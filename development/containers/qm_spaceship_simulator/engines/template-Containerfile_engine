@@ -1,11 +1,25 @@
-FROM quay.io/centos/centos:stream9
+#FROM registry.fedoraproject.org/fedora:latest
+FROM quay.io/centos/centos:stream9 
 
 WORKDIR /root
 RUN dnf update -y && \
 dnf install -y 'dnf-command(config-manager)'
 
-RUN dnf install -y epel-release
-RUN dnf config-manager --set-enabled crb
+RUN dnf install -y epel-release            # comment for Fedora build
+RUN dnf config-manager --set-enabled crb   # comment for Fedora build
+
+RUN dnf -y install systemd procps-ng && dnf clean all
+RUN systemctl mask \
+    systemd-remount-fs.service \
+    dev-hugepages.mount \
+    sys-fs-fuse-connections.mount \
+    systemd-logind.service \
+    getty.target \
+    console-getty.service \
+    systemd-udev-trigger.service \
+    systemd-udevd.service \
+    systemd-random-seed.service \
+    systemd-machine-id-commit.service
 
 RUN dnf install -y hostname \
 		   git \
@@ -39,9 +53,11 @@ systemctl enable bluechi-agent
 RUN echo -e "[bluechi-controller]\nNodeName=bluechi_controller\nAllowedNodeNames=spaceship_base,engine1_spaceship,engine2_spaceship,engine3_spaceship,engine4_spaceship\n" > /etc/bluechi/controller.conf.d/controller.conf
 
 # Agent settings
-RUN echo -e "[bluechi-agent]\nNodeName=engine1_spaceship\nControllerHost=127.0.0.1\nControllerPort=842\n" > /etc/bluechi/agent.conf.d/agent.conf
+RUN echo -e "[bluechi-agent]\nNodeName=engineX-spaceship\nControllerHost=spaceship_base\nControllerPort=842\n" > /etc/bluechi/agent.conf.d/agent.conf
 
 # Dynamically fetch IP and append to /etc/hosts
-RUN IP=$(hostname -I | awk '{print $1}') && echo "$IP bluechi_controller" >> /etc/hosts
+RUN IP=$(hostname -I | awk '{print $1}') & echo "$IP bluechi_controller" >> /etc/hosts
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+#VOLUME ["/sys/fs/cgroup"]
+#CMD ["tail", "-f", "/dev/null"]
+ENTRYPOINT ["/sbin/init"]
