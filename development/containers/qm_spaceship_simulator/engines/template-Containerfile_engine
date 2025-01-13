@@ -50,7 +50,7 @@ RUN systemctl enable bluechi-controller && \
 systemctl enable bluechi-agent
 
 # Controller settings
-RUN echo -e "[bluechi-controller]\nNodeName=bluechi_controller\nAllowedNodeNames=spaceship_base,engine1_spaceship,engine2_spaceship,engine3_spaceship,engine4_spaceship\n" > /etc/bluechi/controller.conf.d/controller.conf
+RUN echo -e "[bluechi-controller]\nNodeName=bluechi_controller\nAllowedNodeNames=spaceship_base,engineX-spaceship\n" > /etc/bluechi/controller.conf.d/controller.conf
 
 # Agent settings
 RUN echo -e "[bluechi-agent]\nNodeName=engineX-spaceship\nControllerHost=spaceship_base\nControllerPort=842\n" > /etc/bluechi/agent.conf.d/agent.conf
