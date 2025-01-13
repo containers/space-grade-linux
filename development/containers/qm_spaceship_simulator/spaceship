@@ -34,10 +34,6 @@ class SpaceshipManager:
             print(f"Command output: {e.output}")
             print(f"Command stderr: {e.stderr}")
             raise
-    #def run_command(command):
-    #    """Helper function to execute shell commands."""
-    #    print(f"Running: {' '.join(command)}")
-    #    subprocess.run(command, shell=False, check=True)
 
     @staticmethod
     def get_container_ip(container_name):
@@ -45,6 +41,26 @@ class SpaceshipManager:
         command = ["podman", "exec", "-it", container_name, "hostname", "-I"]
         result = subprocess.check_output(command, text=True).strip()
         return result.split()[0]
+
+    def update_containerfile(self):
+        """Updates the Containerfile with engine-specific names, including dynamic lists of engines."""
+        containerfile_path = "Containerfile"
+        engine_list = ",".join([f"engine{i}-spaceship" for i in range(1, self.num_engines + 1)])
+
+        updated_lines = []
+        with open(containerfile_path, "r") as file:
+            for line in file:
+                # Replace placeholder with the dynamic engine list in AllowedNodeNames
+                if "AllowedNodeNames=spaceship_base,engineX-spaceship" in line:
+                    updated_line = line.replace("engineX-spaceship", engine_list)
+                    updated_lines.append(updated_line)
+                else:
+                    updated_lines.append(line)
+
+        with open(containerfile_path, "w") as file:
+            file.writelines(updated_lines)
+
+        print(f"Updated {containerfile_path} with {self.num_engines} engines.")
 
     def setup_spaceship_base(self):
         """Sets the Spaceship Base entry in /etc/hosts and restarts required services."""
@@ -69,6 +85,19 @@ class SpaceshipManager:
             print(f"An error occurred while executing a command: {e}")
             raise
 
+    def check_service_ready(self, engine_name, service_name):
+        """Check if a service is active and ready before restarting it."""
+        try:
+            self.run_command([
+                "podman", "exec", "-it", engine_name, "bash", "-c",
+                f"systemctl restart {service_name}"
+            ])
+            print(f"Service {service_name} on {engine_name} is active and ready.")
+            return True
+        except subprocess.CalledProcessError:
+            print(f"Service {service_name} on {engine_name} is not active. Waiting...")
+            return False
+
     def configure_engines(self):
         """Configures engines with IP and updates /etc/hosts."""
         for i in range(1, self.num_engines + 1):
@@ -85,8 +114,25 @@ class SpaceshipManager:
                 "podman", "exec", "-it", engine_name, "bash", "-c",
                 f"echo '{self.spaceship_IP} spaceship_base' >> /etc/hosts"
             ])
-            self.run_command(["sleep", "5"])
-            self.run_command(["podman", "exec", "-it", engine_name, "bash", "-c", "systemctl restart bluechi-agent"])
+
+            ready = False
+            retries = 5
+            while not ready and retries > 0:
+                ready = self.check_service_ready(engine_name, "bluechi-agent")
+                if not ready:
+                    self.run_command([
+                        "podman", "exec", "-it", engine_name, "bash", "-c",
+                        "sleep 10"
+                    ])
+                    retries -= 1
+
+            if ready:
+                self.run_command([
+                    "podman", "exec", "-it", engine_name, "bash", "-c",
+                    "systemctl restart bluechi-agent"
+                ])
+            else:
+                print(f"Service bluechi-agent on {engine_name} is not ready after multiple attempts.")
 
     def prepare_containerfile(self, engine_number):
         """Copies the template Containerfile and customizes it for a specific engine."""
@@ -96,8 +142,8 @@ class SpaceshipManager:
         shutil.copy(template_path, engine_path)
 
         sed_command = [
-            "sed", "-i", 
-            f"s/NodeName=engineX-spaceship/NodeName=engine{engine_number}-spaceship/", 
+            "sed", "-i",
+            f"s/NodeName=engineX-spaceship/NodeName=engine{engine_number}-spaceship/",
             engine_path
         ]
         self.run_command(sed_command)
@@ -105,7 +151,7 @@ class SpaceshipManager:
     def build_spaceship(self):
         """Builds the spaceship base container."""
         build_command = [
-            "podman", "build", "--cap-add=sys_admin", "-f", "Containerfile", 
+            "podman", "build", "--cap-add=sys_admin", "-f", "Containerfile",
             "-t", "localhost/spaceship:latest", "."
         ]
         self.run_command(build_command)
@@ -114,7 +160,7 @@ class SpaceshipManager:
         """Builds a specific engine container."""
         self.prepare_containerfile(engine_number)
         build_command = [
-            "podman", "build", "--cap-add=sys_admin", "-f", f"engines/Containerfile_engine{engine_number}", 
+            "podman", "build", "--cap-add=sys_admin", "-f", f"engines/Containerfile_engine{engine_number}",
             "-t", f"localhost/engine{engine_number}-spaceship:latest", "."
         ]
         self.run_command(build_command)
@@ -122,15 +168,16 @@ class SpaceshipManager:
     def run_engine(self, engine_number):
         """Runs a specific engine container with --replace to ensure idempotency."""
         self.run_command([
-            "podman", "run", "--replace", "-d", "--systemd=true", "--name", f"engine{engine_number}-spaceship", 
+            "podman", "run", "--replace", "-d", "--systemd=true", "--name", f"engine{engine_number}-spaceship",
             "--privileged", f"localhost/engine{engine_number}-spaceship:latest"
         ])
 
     def main(self):
         """Main function to build and run the spaceship base and engines."""
+        self.update_containerfile()  # Update the Containerfile before building
         self.build_spaceship()
         self.run_command([
-            "podman", "run", "--replace", "-d", "--systemd=true", "--name", "spaceship_base", 
+            "podman", "run", "--replace", "-d", "--systemd=true", "--name", "spaceship_base",
             "--privileged", "localhost/spaceship:latest"
         ])
 
