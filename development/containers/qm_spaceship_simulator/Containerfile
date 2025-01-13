@@ -26,7 +26,8 @@ RUN dnf install -y hostname \
 		   iputils \
                    systemd-devel \
                    selinux-policy-devel
-
+                   #stellarium \
+                   #stellarium-data
 
 RUN git clone https://github.com/containers/qm.git
 RUN cd qm && make kvm_subpackage && make rpm && cd rpmbuild/RPMS/noarch && dnf install -y ./*.rpm
