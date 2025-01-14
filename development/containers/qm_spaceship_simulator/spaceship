@@ -148,7 +148,7 @@ class SpaceshipManager:
         ]
         self.run_command(sed_command)
 
-    def build_spaceship(self):
+    def build_qm(self):
         """Builds the spaceship base container."""
         build_command = [
             "podman", "build", "--cap-add=sys_admin", "-f", "Containerfile",
@@ -175,7 +175,7 @@ class SpaceshipManager:
     def main(self):
         """Main function to build and run the spaceship base and engines."""
         self.update_containerfile()  # Update the Containerfile before building
-        self.build_spaceship()
+        self.build_qm()
         self.run_command([
             "podman", "run", "--replace", "-d", "--systemd=true", "--name", "spaceship_base",
             "--privileged", "localhost/spaceship:latest"
