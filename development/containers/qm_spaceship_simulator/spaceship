@@ -196,7 +196,13 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Build and run podman engine containers.")
     parser.add_argument("num_engines", type=int, help="Number of engines to build and run")
+    parser.add_argument("--setup-qm", action="store_true", help="Only setup and build the spaceship base (QM)")
     args = parser.parse_args()
 
     manager = SpaceshipManager(args.num_engines)
-    manager.main()
+
+    if args.setup_qm:
+        manager.update_containerfile()  # Update the Containerfile before building
+        manager.build_qm()              # Build the spaceship base container
+    else:
+        manager.main()
