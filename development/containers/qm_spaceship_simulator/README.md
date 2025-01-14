@@ -1,7 +1,7 @@
 ## Build
 
 ```console
- podman pull quay.io/qm-images/space-grade-linux:spaceship
+bash-5.2# podman pull quay.io/qm-images/space-grade-linux:spaceship
 ```
 
 
@@ -15,7 +15,7 @@ bash-5.2# podman pull quay.io/qm-images/space-grade-linux:rocket_engine
 
 for engine_number in {1..9}; do
     podman run --replace -d --systemd=true --name engine${engine_number}-spaceship \
-    --privileged localhost/rocket_engine:latest
+    --privileged quay.io/qm-images/space-grade-linux:rocket_engine
 done
 
 ```
