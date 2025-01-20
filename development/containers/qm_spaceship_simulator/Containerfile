@@ -44,6 +44,10 @@ RUN cd qm && make kvm_subpackage && make rpm && cd rpmbuild/RPMS/noarch && dnf i
 
 RUN /usr/share/qm/setup --skip-systemctl --hostname localrootfs
 
+# Disable blockage of sched_* for realtime
+RUN sed -i '/^SeccompProfile=\/usr\/share\/qm\/seccomp\.json/s/^/#/' /usr/share/containers/systemd/qm.containe
+RUN systemctl restart qm
+
 # Bluechi
 
 RUN systemctl enable bluechi-controller && \
