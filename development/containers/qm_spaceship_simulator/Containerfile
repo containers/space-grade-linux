@@ -2,6 +2,7 @@
 # ==================
 # podman login quay.io
 # podman build -t quay.io/qm-images/space-grade-linux:latest -f Containerfile
+# podman run -it --name space-grade-container quay.io/qm-images/space-grade-linux:latest
 # podman push quay.io/qm-images/space-grade-linux:latest
 FROM quay.io/centos/centos:stream9
 
