@@ -7,6 +7,8 @@
 FROM quay.io/centos/centos:stream9
 
 WORKDIR /root
+
+RUN echo "root:password" | chpasswd
 RUN dnf update -y && \
 dnf install -y 'dnf-command(config-manager)'
 
