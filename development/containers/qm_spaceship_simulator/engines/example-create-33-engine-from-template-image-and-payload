@@ -1,0 +1,15 @@
+# Number of engines to create
+engine_count=33
+
+podman pull quay.io/qm-images/space-grade-linux-template-image-for-rocket-components-or-services:latest
+# Image name
+image_name="quay.io/qm-images/space-grade-linux-template-image-for-rocket-components-or-services:latest"
+
+# Loop to create the engines
+for i in $(seq 1 $engine_count); do
+    podman run --replace -d --privileged --name "spaceship-engine$i" "$image_name"
+    echo "Spaceship engine $i created."
+done
+
+podman run --replace -d --privileged --name spaceship-payload quay.io/qm-images/space-grade-linux-template-image-for-rocket-components-or-services:latest
+

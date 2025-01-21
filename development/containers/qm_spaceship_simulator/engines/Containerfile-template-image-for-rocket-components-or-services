@@ -1,7 +1,23 @@
+# How to build
+# ==================
+# podman login quay.io
+# podman build --cap-add=sys_admin -t quay.io/qm-images/space-grade-linux-template-image-for-rocket-components-or-services:latest -f Containerfile-template-image-for-rocket-components-or-services
+#
+# Running example:
+# ==================
+# podman run -it --privileged --name spaceship-engine1 quay.io/qm-images/space-grade-linux-template-image-for-rocket-components-or-services:latest
+# podman run -it --privileged --name spaceship-payload quay.io/qm-images/space-grade-linux-template-image-for-rocket-components-or-services:latest
+#
+# Podman push into the repo
+# ===========================
+# podman push quay.io/qm-images/space-grade-linux-template-image-for-rocket-components-or-services:latest
+#
 #FROM registry.fedoraproject.org/fedora:latest
 FROM quay.io/centos/centos:stream9 
 
 WORKDIR /root
+
+RUN echo "root:password" | chpasswd
 RUN dnf update -y && \
 dnf install -y 'dnf-command(config-manager)'
 
