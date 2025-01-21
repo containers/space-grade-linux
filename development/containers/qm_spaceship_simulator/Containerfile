@@ -1,8 +1,8 @@
 # How to build
 # ==================
 # podman login quay.io
-# podman build -t quay.io/qm-images/space-grade-linux:latest -f Containerfile
-# podman run -it --name space-grade-container quay.io/qm-images/space-grade-linux:latest
+# podman build --cap-add=sys_admin -t quay.io/qm-images/space-grade-linux:latest -f Containerfile
+# podman run -it --name space-grade-container --privileged quay.io/qm-images/space-grade-linux:latest
 # podman push quay.io/qm-images/space-grade-linux:latest
 FROM quay.io/centos/centos:stream9
 
@@ -38,17 +38,16 @@ RUN dnf install -y hostname \
                    #stellarium-data
 
 RUN git clone https://github.com/containers/qm.git
-RUN cd qm && make kvm_subpackage && make rpm && cd rpmbuild/RPMS/noarch && dnf install -y ./*.rpm
+RUN cd qm && make rpm && cd rpmbuild/RPMS/noarch && dnf install -y ./*.rpm
 
 # or install via dnf install from the rhcontainerbot/qm REPO
-#RUN dnf copr enable -y rhcontainerbot/qm centos-stream-9-$(arch)
-#RUN dnf install qm -y
-
-RUN /usr/share/qm/setup --skip-systemctl --hostname localrootfs
+# RUN dnf copr enable -y rhcontainerbot/qm centos-stream-9-$(arch)
+# RUN dnf install qm -y
 
 # Disable blockage of sched_* for realtime
-RUN sed -i '/^SeccompProfile=\/usr\/share\/qm\/seccomp\.json/s/^/#/' /usr/share/containers/systemd/qm.containe
-RUN systemctl restart qm
+RUN sed -i '/^SeccompProfile=\/usr\/share\/qm\/seccomp\.json/s/^/#/' /usr/share/containers/systemd/qm.container
+RUN /usr/share/qm/setup --skip-systemctl --hostname localrootfs
+
 
 # Bluechi
 
