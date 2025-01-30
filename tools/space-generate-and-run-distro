@@ -23,6 +23,9 @@ pushd ../distro/json/
     echo -e "===========================================\n"
     ls output/qcow2/
 
+    sudo virsh destroy space-grade-linux 2> /dev/null
+    sudo virsh undefine space-grade-linux --remove-all-storage 2> /dev/null
+
     sudo virt-install \
     --name space-grade-linux \
     --cpu host \
