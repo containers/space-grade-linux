@@ -45,50 +45,7 @@ Space Grade Linux empowers engineers, researchers, and organizations to build re
 
 ## Building the space distro
 
-### Ensure the image base is fetched
-
-```console
-sudo podman pull quay.io/centos-bootc/centos-bootc:stream9
-```
-
-### Install virt-install and virt-viewer
-
-```console
-dnf install virt-install virt-viewer
-```
-
-### Create the output directory
-
-```console
-cd distro/json
-mkdir -p output
-```
-
-### Install and start libvirt
-
-```console
-dnf install libvirtd -y
-systemctl enabled libvirtd
-systemctl start libvirtd
-```
-
-### Run Podman to create the Virtual Machine
-
-```console
-git clone https://github.com/containers/space-grade-linux.git
-cd space-grade-linux/tools
-
-./space-generate-and-run-distro 
-
-Listing qcow2 image from distro/json/output/qcow2/...
-===========================================
-
- Id   Name           State
-------------------------------
- 1    space-grade-linux   running
-
-sudo podman exec -it space-grade-linux
-```
+See [src/README.md](src/README.md)
 
 ## Model Rockets
 
