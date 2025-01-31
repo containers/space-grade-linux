@@ -14,5 +14,6 @@ network --bootproto=dhcp --device=link --activate --onboot=on
 
 # Here's where we reference the container image to install - notice the kickstart
 # has no `%packages` section!  What's being installed here is a container image.
-ostreecontainer --url quay.io/qm-images/space-grade-linux:latest
+ostreecontainer --url quay.io/qm-images/space-grade-linux
+ostreecontainer --url quay.io/qm-images/space-grade-linux-engine:latest
 """
