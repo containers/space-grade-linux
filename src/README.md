@@ -1,6 +1,11 @@
 ## Build
 
-Go into the QM bash entrypoint and download the space-grade-linux container images.
+If you are using [QM project](https://github.com/containers/qm.git) (as we suggest) for extra security layer for containers, install qm first or just skip the `podman qm bash` and execute podman commands.
+
+```
+sudo dnf install qm -y
+/usr/share/qm/setup
+```
 
 ```console
 $ podman exec -it qm bash
