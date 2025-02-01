@@ -13,15 +13,25 @@ bash-5.2# podman pull quay.io/qm-images/space-grade-linux:spaceship
 bash-5.2# podman pull quay.io/qm-images/space-grade-linux:rocket_engine
 ```
 
+Create a specific network for the spaceship
+```bash
+podman network create --subnet=192.168.100.0/24 spaceship-net
+```
+
+```console
 Start the spaceship base (single container) plus engines (containers) for your rocket:
 
 ```console
 #!/bin/bash
 
-podman run --replace -d --systemd=true --name spaceship --privileged quay.io/qm-images/space-grade-linux:spaceship
+podman run --replace -d --systemd=true --name spaceship --privileged \
+    --network spaceship-net --ip 192.168.100.100 \
+    quay.io/qm-images/space-grade-linux:spaceship
 
 for engine_number in {1..9}; do
-    podman run --replace -d --systemd=true --name engine${engine_number}-spaceship --privileged quay.io/qm-images/space-grade-linux:rocket_engine
+    podman run --replace -d --systemd=true --name engine${engine_number}-spaceship \
+        --privileged --network spaceship-net --ip 192.168.100.1${engine_number} \
+        quay.io/qm-images/space-grade-linux:rocket_engine
 done
 ```
 
