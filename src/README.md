@@ -8,13 +8,15 @@ sudo dnf install qm -y
 ```
 
 ```console
+# podman pull quay.io/qm-images/space-grade-linux:spaceship
 $ podman exec -it qm bash
-bash-5.2# podman pull quay.io/qm-images/space-grade-linux:spaceship
 bash-5.2# podman pull quay.io/qm-images/space-grade-linux:rocket_engine
 ```
 
 Create a specific network for the spaceship
 ```bash
+podman network create --subnet=192.168.100.0/24 spaceship-net
+$ podman exec -it qm bash
 podman network create --subnet=192.168.100.0/24 spaceship-net
 ```
 

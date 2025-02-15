@@ -21,6 +21,10 @@ setup(
     author_email='dougsland@redhat.com, lrossett@redhat.com, dwalsh@redhat.com',
     license='Apache License 2.0',
     packages=find_packages(),
+    install_requires=[
+        'rclpy',
+        'std_msgs',
+    ],
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: Apache Software License',
