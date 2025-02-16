@@ -1,0 +1,2 @@
+podman run -d --replace --privileged --name heat_shield_protection quay.io/qm-images/space-grade-linux-template-image-for-rocket-components-or-services:latest
+podman ps

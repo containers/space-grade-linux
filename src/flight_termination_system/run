@@ -1,0 +1,2 @@
+podman run -d --replace --privileged --name flight_termination_system quay.io/qm-images/space-grade-linux-template-image-for-rocket-components-or-services:latest
+podman ps

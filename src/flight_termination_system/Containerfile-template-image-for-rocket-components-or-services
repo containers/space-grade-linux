@@ -1,0 +1,59 @@
+# How to build
+# ==================
+# podman login quay.io
+# podman build --cap-add=sys_admin -t quay.io/qm-images/space-grade-linux-template-image-for-rocket-components-or-services:latest -f Containerfile-template-image-for-rocket-components-or-services
+#
+# Running example:
+# ==================
+# podman run -it --privileged --name spaceship-engine1 quay.io/qm-images/space-grade-linux-template-image-for-rocket-components-or-services:latest
+# podman run -it --privileged --name spaceship-payload quay.io/qm-images/space-grade-linux-template-image-for-rocket-components-or-services:latest
+#
+# Podman push into the repo
+# ===========================
+# podman push quay.io/qm-images/space-grade-linux-template-image-for-rocket-components-or-services:latest
+#
+#FROM registry.fedoraproject.org/fedora:latest
+FROM quay.io/centos/centos:stream9 
+
+WORKDIR /root
+
+RUN echo "root:password" | chpasswd
+RUN dnf update -y && \
+dnf install -y 'dnf-command(config-manager)'
+
+RUN dnf install -y epel-release            # comment for Fedora build
+RUN dnf config-manager --set-enabled crb   # comment for Fedora build
+
+RUN dnf -y install systemd procps-ng && dnf clean all
+
+RUN dnf install -y hostname \
+		   git \
+		   make \
+		   gcc \
+                   podman \
+		   g++ \
+                   bluechi-agent \
+		   bluechi-ctl \
+		   bluechi-selinux \
+		   rpm-build \
+		   container-selinux \
+		   golang-github-cpuguy83-md2man \
+		   selinux-policy \
+                   iproute \
+                   iproute-devel \
+		   iputils \
+                   systemd-devel \
+                   selinux-policy-devel
+
+# Bluechi
+RUN systemctl enable bluechi-agent
+
+# Agent settings
+RUN echo -e "[bluechi-agent]\nNodeName=engineX-spaceship\nControllerHost=spaceship_base\nControllerPort=842\n" > /etc/bluechi/agent.conf.d/agent.conf
+
+# Dynamically fetch IP and append to /etc/hosts
+RUN IP=$(hostname -I | awk '{print $1}') & echo "$IP bluechi_controller" >> /etc/hosts
+
+#VOLUME ["/sys/fs/cgroup"]
+#CMD ["tail", "-f", "/dev/null"]
+ENTRYPOINT ["/sbin/init"]
